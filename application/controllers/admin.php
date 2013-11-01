@@ -16,7 +16,6 @@ class Admin extends CI_Controller {
 
     $this->sources = $this->constantes->assets();
     $this->load->library('grocery_CRUD');
-
    
   }
 
@@ -35,8 +34,8 @@ class Admin extends CI_Controller {
 		$campos = new grocery_CRUD();
 		$campos->set_table("campos");
 		$campos->set_subject("Campo");
-    $campos->display_as('ubicacion', 'Ubicación');
-    $campos->unset_texteditor('ubicacion');
+	    $campos->display_as('ubicacion', 'Ubicación');
+	    $campos->unset_texteditor('ubicacion');
 		$campos->set_rules('nombre', 'Nombre del Campo',"required|alpha_numeric|min_length[2]|max_length[45]");
 		$campos->set_rules('ubicacion', 'Ubicación del campo',"required|min_length[2]");
 		$output = $campos->render();
@@ -69,24 +68,34 @@ class Admin extends CI_Controller {
 
 		$historial->set_table("historial");
 		$historial->set_subject("Historial");
-    // $historial->set_theme("datatables");
+    	// $historial->set_theme("datatables");
 		
-    $historial->unset_texteditor('seriales_bombas');
-    $historial->unset_texteditor('seriales_SG');
-    $historial->unset_texteditor('seriales_SS');
-    $historial->unset_texteditor('seriales_MT');
-    $historial->unset_texteditor('comentario_falla');
+		$historial->columns("pozos_idpozos","corrida","campos_idcampos","fecha_instalacionf","fecha_arranque","fecha_falla","fecha_pullingi","dias_instalacion","dias_operacion","profundidad_succion","MTBP");
+	    $historial->unset_texteditor('seriales_bombas');
+	    $historial->unset_texteditor('seriales_SG');
+	    $historial->unset_texteditor('seriales_SS');
+	    $historial->unset_texteditor('seriales_MT');
+	    $historial->unset_texteditor('comentario_falla');
+	    
+	    $historial->set_relation('pozos_idpozos','pozos','nombre');
+	    $historial->set_relation('campos_idcampos','campos','nombre');
 
-    $historial->set_relation('pozos_idpozos','pozos','nombre');
-    $historial->set_relation('campos_idcampos','campos','nombre');
+	    $historial->display_as('pozos_idpozos', 'Pozo');
+	    $historial->display_as('campos_idcampos', 'Campo');
+	    $historial->display_as('fecha_instalacionf', 'Fecha Final de Instalación');
+	    $historial->display_as('fecha_arranque', 'Fecha de Arranque');
+	    $historial->display_as('fecha_falla', 'Fecha de Falla');
+	    $historial->display_as('fecha_pullingi', 'Fecha de Pulling');
+	    $historial->display_as('dias_instalacion', 'Días de Instalación');
+	    $historial->display_as('dias_operacion', 'Días de Operación');
+	    $historial->display_as('profundidad_succion', 'Profundidad');
 
-    $historial->display_as('fecha_instalacionf', 'Fecha Final de Instalación');
-		// $historial->set_rules('nombre', 'Nombre del Pozo',"required|alpha_numeric|min_length[2]|max_length[12]");
 		$output = $historial->render();
 
 		$this->load->view('vista_header_admin', $output);
 		$this->load->view('vista_contenido_historial');
 		$this->load->view('vista_pie_admin');
+		$this->load->view('script_h');
 	
 	}
 
@@ -98,8 +107,5 @@ class Admin extends CI_Controller {
 	  redirect('/');
 	
 	}
-
-
-	
 
 }

@@ -28,7 +28,9 @@
 
     <!-- Custom styles for this template -->
     <link href="<?=ASSETS_DIR?>css/sticky-footer-navbar.css" rel="stylesheet">
-
+    
+    <!-- Personalizados -->
+    <link href="<?=ASSETS_DIR?>css/default.css" rel="stylesheet">
   </head>
 
   <body>
