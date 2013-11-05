@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"Date",
+				"DateDiff"
+			],
+			[
+				"in",
+				"inDays"
+			],
+			[
+				"Da",
+				"DateDiff"
+			],
+			[
+				"dias",
+				"dias_instalacion"
+			],
+			[
+				"campo",
+				"campos_idcampos"
+			],
+			[
+				"pozos",
+				"pozos_idpozos"
+			],
+			[
 				"http",
 				"http://codeigniter"
 			],
@@ -75,14 +99,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "application/controllers/admin.php",
-			"settings":
-			{
-				"buffer_size": 2728,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -120,9 +136,73 @@
 	},
 	"file_history":
 	[
-		"/home/bj/www/pdvsa/application/controllers/welcome.php",
-		"/home/bj/www/pdvsa/application/views/vista_header_admin.php",
 		"/home/bj/www/pdvsa/application/controllers/admin.php",
+		"/home/bj/www/pdvsa/application/views/script_h.php",
+		"/home/bj/www/pdvsa/assets/css/default.css",
+		"/home/bj/www/pdvsa/application/views/vista_header_admin.php",
+		"/home/bj/Downloads/jqplot/examples/ages.json",
+		"/home/bj/Downloads/jqplot/examples/ajax-loader.gif",
+		"/home/bj/Downloads/jqplot/examples/area.html",
+		"/home/bj/Downloads/jqplot/examples/axisLabelTests.html",
+		"/home/bj/Downloads/jqplot/examples/axisLabelsRotatedText.html",
+		"/home/bj/Downloads/jqplot/examples/axisScalingForceTickAt.html",
+		"/home/bj/Downloads/jqplot/examples/bandedLine.html",
+		"/home/bj/Downloads/jqplot/examples/bar-charts.html",
+		"/home/bj/Downloads/jqplot/examples/barLineAnimated.html",
+		"/home/bj/Downloads/jqplot/examples/barTest.html",
+		"/home/bj/Downloads/jqplot/examples/bezierCurve.html",
+		"/home/bj/Downloads/jqplot/examples/blockPlot.html",
+		"/home/bj/Downloads/jqplot/examples/bubble-plots.html",
+		"/home/bj/Downloads/jqplot/examples/bubbleChart.html",
+		"/home/bj/Downloads/jqplot/examples/candlestick-charts.html",
+		"/home/bj/Downloads/jqplot/examples/candlestick.html",
+		"/home/bj/Downloads/jqplot/examples/canvas-overlay.html",
+		"/home/bj/Downloads/jqplot/examples/cursor-highlighter.html",
+		"/home/bj/Downloads/jqplot/examples/customHighlighterCursorTrendline.html",
+		"/home/bj/Downloads/jqplot/examples/dashboardWidget.html",
+		"/home/bj/Downloads/jqplot/examples/dashedLines.html",
+		"/home/bj/Downloads/jqplot/examples/data-renderers.html",
+		"/home/bj/Downloads/jqplot/examples/date-axes.html",
+		"/home/bj/Downloads/jqplot/examples/dateAxisLogAxisZooming.html",
+		"/home/bj/Downloads/jqplot/examples/dateAxisRenderer.html",
+		"/home/bj/Downloads/jqplot/examples/draw-rectangles.html",
+		"/home/bj/Downloads/jqplot/examples/fillBetweenLines.html",
+		"/home/bj/Downloads/jqplot/examples/hiddenPlotsInTabs.html",
+		"/home/bj/Downloads/jqplot/examples/index.html",
+		"/home/bj/Downloads/jqplot/examples/kcp_area.html",
+		"/home/bj/Downloads/jqplot/examples/kcp_area2.html",
+		"/home/bj/Downloads/jqplot/examples/kcp_cdf.html",
+		"/home/bj/Downloads/jqplot/examples/kcp_engel.html",
+		"/home/bj/Downloads/jqplot/examples/kcp_lorenz.html",
+		"/home/bj/Downloads/jqplot/examples/kcp_pdf.html",
+		"/home/bj/Downloads/jqplot/examples/kcp_pyramid.html",
+		"/home/bj/Downloads/jqplot/examples/kcp_pyramid2.html",
+		"/home/bj/Downloads/jqplot/examples/kcp_pyramid_by_age.html",
+		"/home/bj/Downloads/jqplot/examples/kcp_quintiles.html",
+		"/home/bj/Downloads/jqplot/examples/line-charts.html",
+		"/home/bj/Downloads/jqplot/examples/mekkoCharts.html",
+		"/home/bj/Downloads/jqplot/examples/meterGauge.html",
+		"/home/bj/Downloads/jqplot/examples/multipleBarColors.html",
+		"/home/bj/Downloads/jqplot/examples/pie-donut-charts.html",
+		"/home/bj/Downloads/jqplot/examples/pieTest.html",
+		"/home/bj/Downloads/jqplot/examples/pieTest4.html",
+		"/home/bj/Downloads/jqplot/examples/point-labels.html",
+		"/home/bj/Downloads/jqplot/examples/resizablePlot.html",
+		"/home/bj/Downloads/jqplot/examples/rotated-tick-labels.html",
+		"/home/bj/Downloads/jqplot/examples/rotatedTickLabelsZoom.html",
+		"/home/bj/Downloads/jqplot/examples/selectorSyntax.html",
+		"/home/bj/Downloads/jqplot/examples/smoothedLine.html",
+		"/home/bj/Downloads/jqplot/examples/theming.html",
+		"/home/bj/Downloads/jqplot/examples/waterfall.html",
+		"/home/bj/Downloads/jqplot/examples/waterfall2.html",
+		"/home/bj/Downloads/jqplot/examples/zoom1.html",
+		"/home/bj/Downloads/jqplot/examples/zoomOptions.html",
+		"/home/bj/Downloads/jqplot/examples/zoomProxy.html",
+		"/home/bj/Downloads/jqplot/examples/zooming.html",
+		"/home/bj/www/pdvsa/application/views/vista_contenido_historial.php",
+		"/home/bj/www/pdvsa/assets/css/bootstrap.css",
+		"/home/bj/www/pdvsa/application/views/script_h",
+		"/home/bj/www/pdvsa/application/controllers/welcome.php",
 		"/home/bjohnmer/www/pdvsa/application/views/vista_header_admin.php",
 		"/home/bjohnmer/www/pdvsa/application/views/vista_contenido_historial.php",
 		"/home/bjohnmer/www/pdvsa/application/views/vista_contenido_pozos.php",
@@ -183,36 +263,7 @@
 		"/home/bjohnmer/www/usm/application/config/grocery_crud.php",
 		"/home/bjohnmer/www/usm/application/models/auth_model.php",
 		"/home/bjohnmer/www/usm/application/views/medicos.html",
-		"/home/bjohnmer/www/camiula/application/controllers/medico.php",
-		"/home/bjohnmer/www/usm/application/views/entrada_vista.php",
-		"/home/bjohnmer/www/usm/application/controllers/auth.php",
-		"/home/bjohnmer/www/usm/application/views/entrada.php",
-		"/home/bjohnmer/www/usm/application/views/cabecerafront.php",
-		"/home/bjohnmer/www/usm/application/views/index.php",
-		"/home/bjohnmer/www/usm/.htaccess",
-		"/home/bjohnmer/www/camiula/application/views/welcome_message.php",
-		"/home/bjohnmer/www/camiula/application/models/login_model.php",
-		"/home/bjohnmer/www/usm/application/views/cabeceraadmin.php",
-		"/home/bjohnmer/www/usm/application/views/pieadmin.php",
-		"/home/bjohnmer/www/usm/application/views/admin.php",
-		"/home/bjohnmer/www/usm/application/libraries/index.html",
-		"/home/bjohnmer/www/usm/application/config/database.php",
-		"/home/bjohnmer/www/usm/application/config/constants.php",
-		"/home/bjohnmer/www/usm/application/libraries/datemanager.php",
-		"/home/bjohnmer/www/usm/application/views/index___.php",
-		"/home/bjohnmer/Software/Files.desktop",
-		"/home/bjohnmer/Software/Gimp.desktop",
-		"/home/bjohnmer/Software/Inkscape-1.desktop",
-		"/home/bjohnmer/Software/LibreOffice Calc.desktop",
-		"/home/bjohnmer/Software/LibreOffice Writer.desktop",
-		"/media/bjohnmer/MasY+/Respaldo Vaio/varias/Inkscape-1.desktop",
-		"/media/bjohnmer/MasY+/Respaldo Vaio/varias/Gimp.desktop",
-		"/media/bjohnmer/MasY+/Respaldo Vaio/varias/LibreOffice Calc.desktop",
-		"/media/bjohnmer/MasY+/Respaldo Vaio/varias/LibreOffice Writer.desktop",
-		"/home/bjohnmer/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
-		"/home/bjohnmer/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
-		"/home/bjohnmer/.config/sublime-text-2/Packages/SideBarEnhancements/messages/11.13.2012.1305.0.txt",
-		"/home/bjohnmer/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap"
+		"/home/bjohnmer/www/camiula/application/controllers/medico.php"
 	],
 	"find":
 	{
@@ -220,9 +271,11 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 105.0,
 		"where_history":
 		[
+			"/home/bj/Downloads/jqplot/examples",
+			"/home/bj/Downloads/jqplot/examples/area.html",
 			"/home/bjohnmer/www/usm/application/views",
 			"<project>"
 		]
@@ -232,6 +285,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js",
+			"fa",
+			"ff",
+			"fa",
+			"profundidad_S",
+			"ad_S",
+			"dias_operacion",
+			"Instalación",
+			"fecha",
 			"unset_texteditor",
 			"campos",
 			"pozos",
@@ -276,6 +338,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"../jquery.js",
 			"        ",
 			"col-lg-2 col-offset-5"
 		],
@@ -288,79 +351,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "application/controllers/admin.php",
-					"settings":
-					{
-						"buffer_size": 2728,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close"
-							],
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 33.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
