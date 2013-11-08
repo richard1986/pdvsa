@@ -7,7 +7,7 @@
     <meta name="author" content="">
 
     <title>PDVSA</title>
-    <!-- <link class="include" rel="stylesheet" type="text/css" href="<?=ASSETS_DIR?>css/jquery.jqplot.min.css" /> -->
+    <link class="include" rel="stylesheet" type="text/css" href="<?=ASSETS_DIR?>css/jquery.jqplot.min.css" />
     <!--[if lt IE 9]><script language="javascript" type="text/javascript" src="<?=ASSETS_DIR?>js/excanvas.min.js"></script><![endif]-->
     
     <?php if (!empty($css_files)): ?>
@@ -25,6 +25,7 @@
     <!-- Personalizados -->
     <link href="<?=ASSETS_DIR?>css/default.css" rel="stylesheet">
 
+    <link class="include" rel="stylesheet" type="text/css" href="<?=ASSETS_DIR?>css/jquery.jqplot.min.css" />
     <!--[if lt IE 9]><script language="javascript" type="text/javascript" src="<?=ASSETS_DIR?>js/excanvas.min.js"></script><![endif]-->
     
     <!--script class="include" type="text/javascript" src="<?=ASSETS_DIR?>js/jquery.js"></script-->

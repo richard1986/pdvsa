@@ -108,9 +108,9 @@ class Admin extends CI_Controller {
 	
 	public function GEstadisticas()
 	{
-		$this->load->view('vista_header_admin');
+		$this->load->view('vista_header_gadmin');
 		$this->load->view('vista_estadisticas');
-		$this->load->view('vista_pie_admin');
+		$this->load->view('vista_pie_gadmin');
 	}
 
 	public function logout()

@@ -99,6 +99,54 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "application/controllers/admin.php",
+			"settings":
+			{
+				"buffer_size": 3718,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "application/views/vista_estadisticas.php",
+			"settings":
+			{
+				"buffer_size": 220,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "application/views/vista_buscar_estadisticas.php",
+			"settings":
+			{
+				"buffer_size": 488,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "application/views/vista_header_admin.php",
+			"settings":
+			{
+				"buffer_size": 3770,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "application/views/vista_pie_admin.php",
+			"settings":
+			{
+				"buffer_size": 10801,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "application/views/vista_contenido_campos.php",
+			"settings":
+			{
+				"buffer_size": 140,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -136,6 +184,9 @@
 	},
 	"file_history":
 	[
+		"/home/bj/Downloads/jqplot/examples/barLineAnimated.html",
+		"/home/bj/www/pdvsa/assets/css/bootstrap.css",
+		"/home/bj/www/pdvsa/application/views/vista_contenido_admin.php",
 		"/home/bj/www/pdvsa/application/controllers/admin.php",
 		"/home/bj/www/pdvsa/application/views/script_h.php",
 		"/home/bj/www/pdvsa/assets/css/default.css",
@@ -148,7 +199,6 @@
 		"/home/bj/Downloads/jqplot/examples/axisScalingForceTickAt.html",
 		"/home/bj/Downloads/jqplot/examples/bandedLine.html",
 		"/home/bj/Downloads/jqplot/examples/bar-charts.html",
-		"/home/bj/Downloads/jqplot/examples/barLineAnimated.html",
 		"/home/bj/Downloads/jqplot/examples/barTest.html",
 		"/home/bj/Downloads/jqplot/examples/bezierCurve.html",
 		"/home/bj/Downloads/jqplot/examples/blockPlot.html",
@@ -200,7 +250,6 @@
 		"/home/bj/Downloads/jqplot/examples/zoomProxy.html",
 		"/home/bj/Downloads/jqplot/examples/zooming.html",
 		"/home/bj/www/pdvsa/application/views/vista_contenido_historial.php",
-		"/home/bj/www/pdvsa/assets/css/bootstrap.css",
 		"/home/bj/www/pdvsa/application/views/script_h",
 		"/home/bj/www/pdvsa/application/controllers/welcome.php",
 		"/home/bjohnmer/www/pdvsa/application/views/vista_header_admin.php",
@@ -262,8 +311,7 @@
 		"/home/bjohnmer/www/usm/grocery-crud-1.4/application/models/grocery_crud_model.php",
 		"/home/bjohnmer/www/usm/application/config/grocery_crud.php",
 		"/home/bjohnmer/www/usm/application/models/auth_model.php",
-		"/home/bjohnmer/www/usm/application/views/medicos.html",
-		"/home/bjohnmer/www/camiula/application/controllers/medico.php"
+		"/home/bjohnmer/www/usm/application/views/medicos.html"
 	],
 	"find":
 	{
@@ -271,7 +319,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 105.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"/home/bj/Downloads/jqplot/examples",
@@ -285,6 +333,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"inputPassword3",
+			"false",
+			"CategoryAxisRenderer",
 			"http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js",
 			"fa",
 			"ff",
@@ -351,8 +402,437 @@
 	"groups":
 	[
 		{
+			"selected": 4,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "application/controllers/admin.php",
+					"settings":
+					{
+						"buffer_size": 3718,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3573,
+								3573
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2065.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "application/views/vista_estadisticas.php",
+					"settings":
+					{
+						"buffer_size": 220,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								146,
+								146
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "application/views/vista_buscar_estadisticas.php",
+					"settings":
+					{
+						"buffer_size": 488,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								78,
+								78
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "application/views/vista_header_admin.php",
+					"settings":
+					{
+						"buffer_size": 3770,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1404,
+								1404
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 506.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "application/views/vista_pie_admin.php",
+					"settings":
+					{
+						"buffer_size": 10801,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1972,
+								1972
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1288.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "application/views/vista_contenido_campos.php",
+					"settings":
+					{
+						"buffer_size": 140,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								9,
+								9
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -416,6 +896,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 219.0,
+	"side_bar_width": 257.0,
 	"status_bar_visible": true
 }
