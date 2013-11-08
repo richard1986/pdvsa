@@ -80,6 +80,7 @@ class Admin extends CI_Controller {
 	    $historial->set_relation('pozos_idpozos','pozos','nombre');
 	    $historial->set_relation('campos_idcampos','campos','nombre');
 
+	    // Cambiar la forma en que se muestran los campos en los formularios
 	    $historial->display_as('pozos_idpozos', 'Pozo');
 	    $historial->display_as('campos_idcampos', 'Campo');
 	    $historial->display_as('fecha_instalacionf', 'Fecha Final de Instalación');
@@ -89,6 +90,9 @@ class Admin extends CI_Controller {
 	    $historial->display_as('dias_instalacion', 'Días de Instalación');
 	    $historial->display_as('dias_operacion', 'Días de Operación');
 	    $historial->display_as('profundidad_succion', 'Profundidad');
+	    $historial->display_as('sino_Ytool', 'YTool(Si/No)');
+
+	    
 
 		$output = $historial->render();
 
