@@ -38,7 +38,7 @@ class MY_Form_validation extends CI_Form_validation {
 	 */
 	public function alpha_numeric($str)
 	{
-		return ( ! preg_match("/^([a-záéíóúñ0-9])+$/i", $str)) ? FALSE : TRUE;
+		return ( ! preg_match("/^([a-záéíóúñ0-9-])+$/i", $str)) ? FALSE : TRUE;
 	}
 
 }

@@ -26,6 +26,7 @@
     <link href="<?=ASSETS_DIR?>css/default.css" rel="stylesheet">
 
     <link class="include" rel="stylesheet" type="text/css" href="<?=ASSETS_DIR?>css/jquery.jqplot.min.css" />
+   
     <!--[if lt IE 9]><script language="javascript" type="text/javascript" src="<?=ASSETS_DIR?>js/excanvas.min.js"></script><![endif]-->
     
     <!--script class="include" type="text/javascript" src="<?=ASSETS_DIR?>js/jquery.js"></script-->
@@ -56,9 +57,9 @@
                   <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Historial <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                      <li><a href="<?=base_url()?>admin/historial">Historial de Pozos</a></li>
+                      <li><a href="<?=base_url()?>admin/estadisticas">Estadística de Pozos por Mes</a></li>
                       <li class="divider"></li>
-                      <li><a href="<?=base_url()?>admin/estadisticas">Estadística de Pozos</a></li>
+                      <li><a href="<?=base_url()?>admin/estadisticas2">Estadística de Pozos por Rango</a></li>
                     </ul>
                   </li>
                 </ul>

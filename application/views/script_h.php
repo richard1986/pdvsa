@@ -27,15 +27,60 @@
 	}
 	
 	$(document).ready(function(){
+		$("#field-fecha_arranque").change(function(){
+			if ($("#field-fecha_falla").empty()) {
+				var fa = $(this).val().split("/");
+				var f1 = new Date(fa[2]+"-"+fa[1]+"-"+fa[0]);
+				
+				var f2 = new Date();
+				$("#field-dias_operacion").val(DateDiff.inDays(f2,f1)*-1);
+				
+			}
+			else
+			{
+				var fa = $("#field-fecha_arranque").val().split("/");
+				var f1 = new Date(fa[2]+"-"+fa[1]+"-"+fa[0]);
+				var ff = $("#field-fecha_falla").val().split("/");
+				var f2 = new Date(ff[2]+"-"+ff[1]+"-"+ff[0]);
+				var fi = $("#field-fecha_instalacionf").val().split("/");
+				var f3 = new Date(fi[2]+"-"+fi[1]+"-"+fi[0]);
+				$("#field-dias_operacion").val(DateDiff.inDays(f2,f1)*-1);
+				$("#field-dias_instalacion").val(DateDiff.inDays(f2,f3)*-1);
+			};
+		});
+
+		$("#field-fecha_instalacionf").change(function(){
+			if ($("#field-fecha_falla").empty()) {
+				var fa = $(this).val().split("/");
+				var f1 = new Date(fa[2]+"-"+fa[1]+"-"+fa[0]);
+				
+				var f2 = new Date();
+				$("#field-dias_instalacion").val(DateDiff.inDays(f2,f1)*-1);
+				
+			}
+			else
+			{
+				var fa = $("#field-fecha_arranque").val().split("/");
+				var f1 = new Date(fa[2]+"-"+fa[1]+"-"+fa[0]);
+				var ff = $("#field-fecha_falla").val().split("/");
+				var f2 = new Date(ff[2]+"-"+ff[1]+"-"+ff[0]);
+				var fi = $("#field-fecha_instalacionf").val().split("/");
+				var f3 = new Date(fi[2]+"-"+fi[1]+"-"+fi[0]);
+				$("#field-dias_operacion").val(DateDiff.inDays(f2,f1)*-1);
+				$("#field-dias_instalacion").val(DateDiff.inDays(f2,f3)*-1);
+			};
+		});
 		$("#field-fecha_falla").change(function(){
-			var fa = $("#field-fecha_arranque").val().split("/");
-			var f1 = new Date(fa[2]+"-"+fa[1]+"-"+fa[0]);
-			var ff = $(this).val().split("/");
-			var f2 = new Date(ff[2]+"-"+ff[1]+"-"+ff[0]);
-			var fi = $("#field-fecha_instalacionf").val().split("/");
-			var f3 = new Date(fi[2]+"-"+fi[1]+"-"+fi[0]);
-			$("#field-dias_operacion").val(DateDiff.inDays(f2,f1)*-1);
-			$("#field-dias_instalacion").val(DateDiff.inDays(f2,f3)*-1);
+			
+				var fa = $("#field-fecha_arranque").val().split("/");
+				var f1 = new Date(fa[2]+"-"+fa[1]+"-"+fa[0]);
+				var ff = $(this).val().split("/");
+				var f2 = new Date(ff[2]+"-"+ff[1]+"-"+ff[0]);
+				var fi = $("#field-fecha_instalacionf").val().split("/");
+				var f3 = new Date(fi[2]+"-"+fi[1]+"-"+fi[0]);
+				$("#field-dias_operacion").val(DateDiff.inDays(f2,f1)*-1);
+				$("#field-dias_instalacion").val(DateDiff.inDays(f2,f3)*-1);
+		
 		});
 		$("#field-fecha_pullingi").change(function(){
 			var fp = $(this).val().split("/");

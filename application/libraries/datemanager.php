@@ -2,6 +2,7 @@
 
 class Datemanager
 {
+  
   public function date2mySQL($date)
   {
     $fecha = explode("/", $date);
@@ -25,42 +26,25 @@ class Datemanager
       return false;
     }
   }
-    //Comprueba si la cadena introducida es de la forma D/m/Y (15/04/1920)
-    // if (preg_match('/^\d{1,2}\/\d{1,2}\/\d{4}$/', $fecha))
-    // {
-    //   $bloques = explode("/", $fecha);
-    //   if (($bloques[2]>12)||($bloques[2]<1))
-    //   {
-    //     return FALSE;
-    //   }
-    //   if (($bloques[2]==4)||($bloques[2]==6)||($bloques[2]==9)||($bloques[2]==11))
-    //   {
-    //     $dias_mes = 30;
-    //   }
-    //   else
-    //   {
-    //     if ($bloques[2]==2)
-    //     { //febrero
-    //       if((($bloques[3]%4==0)&&(!($bloques[3]%100==0)))||($bloques[3]%400==0))
-    //       {
-    //         $dias_mes = 29;
-    //       }
-    //       else{
-    //         $dias_mes = 28;
-    //       }
-    //     }
-    //     else
-    //     {
-    //       $dias_mes = 31;
-    //     }
-    //   }
-    //   if (($bloques[1]<1)||($bloques[1]>$dias_mes)){
-    //     return FALSE;
-    //   }
-    // }
-    // else
-    // {
-    //   return FALSE;
-    // }
-    // return TRUE;
+
+  public function strdate2mySQL($date)
+  {
+    $meses = array( 'ene' => "01",
+                    'feb' => "02",
+                    'mar' => "03",
+                    'abr' => "04",
+                    'may' => "05",
+                    'jun' => "06",
+                    'jul' => "07",
+                    'ago' => "08",
+                    'sep' => "09",
+                    'oct' => "10",
+                    'nov' => "11",
+                    'dic' => "12"
+            );
+    $fecha = explode("-", $date);
+    return $fecha[2]."-".$meses[$fecha[1]]."-".$fecha[0];
+  }
+
+
 }

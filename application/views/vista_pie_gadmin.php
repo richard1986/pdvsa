@@ -37,144 +37,20 @@
 
       
         $(document).ready(function () {
+          // Datos para el gráfico 1
+          var s1 = [<?=$PLfTimeBarua[0]->dias_instalacion == 0 ? 0 : $PLfTimeBarua[0]->dias_instalacion;?>, <?=$PLfTimeMot[0]->dias_instalacion == 0 ? 0 : $PLfTimeMot[0]->dias_instalacion;?>];
+          var s2 = [<?=$PRunLifeBarua[0]->dias_operacion == 0 ? 0 : $PRunLifeBarua[0]->dias_operacion;?>, <?=$PRunLifeMot[0]->dias_operacion == 0 ? 0 : $PRunLifeMot[0]->dias_operacion;?>];
+          var s3 = [<?=$MRunLifeBarua[0]->dias_operacion == 0 ? 0 : $MRunLifeBarua[0]->dias_operacion;?>, <?=$MRunLifeMot[0]->dias_operacion == 0 ? 0 : $MRunLifeMot[0]->dias_operacion;?>];
+          var s4 = [<?=$PMTBPBarua[0]->MTBP == 0 ? 0 : $PMTBPBarua[0]->MTBP;?>, <?=$PMTBPMot[0]->MTBP == 0 ? 0 : $PMTBPMot[0]->MTBP;?>];
+          var s5 = [<?=$TPABarua[0]->fecha_falla == 0 ? 0 : $TPABarua[0]->fecha_falla;?>, <?=$TPAMot[0]->fecha_falla == 0 ? 0 : $TPAMot[0]->fecha_falla;?>];
+          var ticks = ['Barúa', 'Motatán'];
             
-            // Datos para el gráfico 1
-            var s1 = [206, 637];
-            var s2 = [201, 631];
-            var s3 = [453, 1833];
-            var s4 = [239, 675];
-            var s5 = [11, 9];
-
-            var ticks = ['Barúa', 'Motatán'];
-            
-            // -----------------------------------
-            
-            // Datos para el gráfico 2
-            var s11 = [567,657,657,567,567,675,675,676,567,657,567,567];
-            var s22 = [678,787,698,768,976,897,687,698,768,976,987,689];
-            var s33 = [234,324,324,324,234,234,324,234,324,234,234,343];
-            var s44 = [4343,4423,4242,4234,4342,3923,4354,3832,4242,3923,4324,4423];
-
-            var ticks2 = ['Ene-2009','Feb-2009','Mar-2009','Abr-2009','May-2009','Jun-2009','Jul-2009','Ago-2009','Sep-2009','Oct-2009','Nov-2009','Dic-2009'];
-            
-            // -----------------------------------
-
-
-            plot1 = $.jqplot("chart1", [s11, s22, s33, s44], {
-                animate: true,
-                animateReplot: true,
-                legend: {
-                    show: true,
-                    placement: 'outsideGrid'
-                },
-                cursor: {
-                    show: true,
-                    zoom: true,
-                    looseZoom: true,
-                    showTooltip: false
-                },
-                series:[
-                {
-                  label:'Promedio Días Instalación',
-                  pointLabels: {
-                      show: true
-                  },
-                  renderer: $.jqplot.BarRenderer,
-                  showHighlight: false,
-                  yaxis: 'yaxis',
-                  rendererOptions: {
-                      animation: {
-                          speed: 2500
-                      },
-                      barWidth: 5,
-                      // barPadding: -70,
-                      barMargin: 0,
-                      highlightMouseOver: false
-                  },
-                },
-                {
-                  label:'Prom. Días Operación',
-                  pointLabels: {
-                      show: true
-                  },
-                  renderer: $.jqplot.BarRenderer,
-                  showHighlight: false,
-                  yaxis: 'yaxis',
-                  rendererOptions: { 
-                      animation: {
-                          speed: 2500
-                      },
-                      barWidth: 5,
-                      // barPadding: -25,
-                      barMargin: 0,
-                      highlightMouseOver: false
-                  },
-                },
-                {
-                  label:'Máx Días Operación Pozo Activo',
-                  pointLabels: {
-                      show: true
-                  },
-                  yaxis: 'yaxis',
-                  dragable: {
-                      color: '#ff3366',
-                      constrainTo: 'x'
-                  },
-                  trendline: {
-                      color: '#cccccc'
-                  },
-                },
-                {
-                  label:'MTBP (Prom. Días Pulling)',
-                  pointLabels: {
-                      show: true
-                  },
-                  yaxis: 'y2axis',
-                  dragable: {
-                      color: '#ff3366',
-                      constrainTo: 'x'
-                  },
-                  trendline: {
-                      color: '#cccccc'
-                  }
-                }
-                ],
-                axes: {
-                    xaxis: {
-                        renderer: $.jqplot.CategoryAxisRenderer,
-                        ticks: ticks2,
-                    },
-                    yaxis: {
-                        min: 0,
-                        max: 1500,
-                        rendererOptions: {
-                            alignTicks: true,
-                            forceTickAt0: true
-                        }
-                    },
-                    y2axis: {
-                        min: 200,
-                        max: 5000,
-                        rendererOptions: {
-                            alignTicks: true,
-                            forceTickAt0: true
-                        }
-                    }
-                },
-                highlighter: {
-                    show: true, 
-                    showLabel: true, 
-                    tooltipAxes: 'y',
-                    sizeAdjust: 7.5 , tooltipLocation : 'ne'
-                }
-            });
-          
           plot2 = $.jqplot("chart2", [s1, s2, s3, s4, s5], {
               animate: true,
               animateReplot: true,
               legend: {
                   show: true,
-                  placement: 'outsideGrid'
+                  placement: 'insideGrid'
               },
               cursor: {
                   show: true,
@@ -202,7 +78,7 @@
                 },
               },
               {
-                label:'Máx Días Operación Pozo Activo',
+                label:'Promedio Días Operación',
                 pointLabels: {
                     show: true
                 },
@@ -220,7 +96,7 @@
                 },
               },
               {
-                label:'N° Pozos Activos',
+                label:'Max Días Operación Pozos Activos',
                 pointLabels: {
                     show: true
                 },
@@ -238,7 +114,7 @@
                 },
               },
               {
-                label:'Prom. Días Operación',
+                label:'MTBP (Prom. Días Pulling)',
                 pointLabels: {
                     show: true
                 },
@@ -256,7 +132,7 @@
                 },
               },
               {
-                label:'MTBP (Prom. Días Pulling)',
+                label:'Número de Pozos Activos',
                 pointLabels: {
                     show: true
                 },
