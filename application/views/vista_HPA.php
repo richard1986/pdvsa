@@ -1,34 +1,18 @@
    <div class="page-header">
-     <h1>Historial <?=$campo[0]->nombre?></h1>
+     <h1><?=$campo[0]->nombre?></h1>
+     <h2>Historial de Pozos Activos</h2>
    </div>
    <p>
-		<table class="table table-striped">
+		<!-- <table class="table table-striped">
 	        <thead>
 	          <tr>
-	            <th>Mes</th>
-	            <th>Pozo</th>
-	            <th>Días de Operación</th>
-	            <th>Corrida</th>
+	            <th>Item</th>
+	            <th>Barúa</th>
+	            <th>Motatán</th>
 	          </tr>	 
 	        </thead>
-	        <tbody>
-				<?php for ($i=0; $i < count($tabla[0]); $i++) { ?>
-		        	<tr>
-		        		<td>
-		        			<?=$tabla[0][$i]?>
-		        		</td>
-		        		<td>
-		        			<?php print_r($tabla[1][$i][0]->nombre_pozo)?>
-		        			
-		        		</td>
-		        		<td>
-		        			<?=$tabla[1][$i][0]->dias_operacion?>
-		        		</td>
-		        		<td>
-		        			<?=$tabla[1][$i][0]->corrida?>
-		        		</td>
-		        	</tr>
-				<?php } ?>
+	        <tbody> -->
+	          
 	          <!-- <tr>
 	            <td>Total Eventos</td>
 	            <td><?=$evBarua?></td>
@@ -106,8 +90,8 @@
 			  	<td><?=$CMTBPBarua[0]->MTBP == 0 ? 0 : $CMTBPBarua[0]->MTBP;?></td>
 			  	<td><?=$CMTBPMot[0]->MTBP == 0 ? 0 : $CMTBPMot[0]->MTBP;?></td>
 			  </tr> -->
-	        </tbody>
-		</table>
+	        <!-- </tbody>
+		</table> -->
 
 	    <div id="chart1" style="width:120%; height:500px"></div>
 	    <!-- <div id="chart2" style="width:50%; height:500px"></div> -->

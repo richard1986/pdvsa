@@ -41,7 +41,7 @@ class Welcome extends CI_Controller {
 	       $this->session->set_userdata("nombre",$data->nombre);
 	       $this->session->set_userdata("login",$data->login);
 	       $this->session->set_userdata("tipo",$data->tipo);
-	       if ($data->tipo == 'Administrador') 
+	       if ($data->tipo == 'Administrador' || $data->tipo == 'Supervisor') 
 	       {
 	       	redirect('admin/');
 	       }

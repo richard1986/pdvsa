@@ -51,21 +51,29 @@
               </div>
               <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+                  <?php if ($this->session->userdata("tipo") == 'Administrador'): ?>
+                    
                   <li <?php if ($this->uri->segment(2)==''): ?>class="active"<?php endif ?>><a href="<?=base_url()?>/admin">Inicio</a></li>
                   <li <?php if ($this->uri->segment(2)=='campos'): ?>class="active"<?php endif ?>><a href="<?=base_url()?>admin/campos">Campos</a></li>
                   <li <?php if ($this->uri->segment(2)=='pozos'): ?>class="active"<?php endif ?>><a href="<?=base_url()?>admin/pozos">Pozos</a></li>
+                    
+                  <?php endif ?>
                   <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Historial <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                       <li><a href="<?=base_url()?>admin/estadisticas">Estadística de Pozos por Mes</a></li>
                       <li class="divider"></li>
                       <li><a href="<?=base_url()?>admin/estadisticas2">Estadística de Pozos por Rango</a></li>
+                      <li class="divider"></li>
+                      <li><a href="<?=base_url()?>admin/HPA1">Historico de Pozos Activos</a></li>
                     </ul>
                   </li>
                 </ul>
+                <?php if ($this->session->userdata("tipo") == 'Administrador'): ?>
                 <ul class="nav navbar-nav navbar-right">
-                  <li><a href="#">Usuarios</a></li>
+                  <li><a href="<?=base_url()?>admin/usuarios">Usuarios</a></li>
                 </ul>
+                <?php endif ?>
               </div><!--/.nav-collapse -->
             </div>
           </div>

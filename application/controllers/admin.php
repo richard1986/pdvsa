@@ -4,20 +4,20 @@ class Admin extends CI_Controller {
 
 	private $sources;
   
-  function __construct()
-  {
-    
-    parent::__construct();
-    
-    $this->load->library('session');
-    if (!$this->session->userdata("logged_in") && $this->session->userdata("tipo") == 'Administrador'){
-      redirect('/');
-    }
+	function __construct()
+	{
 
-    $this->sources = $this->constantes->assets();
-    $this->load->library('grocery_CRUD');
-   
-  }
+		parent::__construct();
+
+		$this->load->library('session');
+		if (!$this->session->userdata("logged_in") && $this->session->userdata("tipo") == 'Administrador'){
+		  redirect('/');
+		}
+
+		$this->sources = $this->constantes->assets();
+		$this->load->library('grocery_CRUD');
+
+	}
 
 	public function index()
 	{
@@ -36,8 +36,8 @@ class Admin extends CI_Controller {
 		$campos->set_subject("Campo");
 	    $campos->display_as('ubicacion', 'Ubicación');
 	    $campos->unset_texteditor('ubicacion');
-		$campos->set_rules('nombre', 'Nombre del Campo',"required|alpha_numeric|min_length[2]|max_length[45]");
-		$campos->set_rules('ubicacion', 'Ubicación del campo',"required");
+		// $campos->set_rules('nombre', 'Nombre del Campo',"required|alpha_numeric|min_length[2]|max_length[45]");
+		// $campos->set_rules('ubicacion', 'Ubicación del campo',"required");
 		$output = $campos->render();
 
 		$this->load->view('vista_header_admin', $output);
@@ -88,16 +88,11 @@ class Admin extends CI_Controller {
 	    $historial->field_type('pozos_idpozos','hidden', $this->uri->segment(3));
 		
 		$p = $this->db
-					 ->where("idpozos",$this->uri->segment(3))
-					 ->join('campos', 'campos.idcampos  = pozos.campos_idcampos')
-					 ->get("pozos")
-					 ->result();
+				  ->where("idpozos",$this->uri->segment(3))
+				  ->join('campos', 'campos.idcampos  = pozos.campos_idcampos')
+				  ->get("pozos")
+				  ->result();
 	    $historial->field_type('campo_id','hidden', $p[0]->campos_idcampos);
-
-	    // $historial->unset_fields('campo_id');
-	    // Cambiar la forma en que se muestran los campos en los formularios
-	    // $historial->display_as('pozos_idpozos', 'Pozo');
-	    // $historial->display_as('campo_id', 'Campo');
 	    $historial->display_as('fecha_instalacionf', 'Fecha Final de Instalación');
 	    $historial->display_as('fecha_arranque', 'Fecha de Arranque');
 	    $historial->display_as('fecha_falla', 'Fecha de Falla');
@@ -108,9 +103,6 @@ class Admin extends CI_Controller {
 	    $historial->display_as('sino_Ytool', 'YTool(Si/No)');
 	    $historial->order_by('pozos_idpozos, corrida, campo_id');
 
-	    // $historial->callback_before_insert(array($this,'set_pozo'));
-	    // $historial->callback_before_update(array($this,'set_pozo'));
-
 	    $output = $historial->render();
 
 		$this->load->view('vista_header_admin', $output);
@@ -119,22 +111,6 @@ class Admin extends CI_Controller {
 		$this->load->view('script_h');
 			
 	}
-
-	// function set_pozo($post_array) {
-	  
-	//   $post_array['pozos_idpozos'] = $this->uri->segment(3);
-
-	// 		$p = $this->db
-	// 					 ->where("idpozos",$this->uri->segment(3))
-	// 					 ->join('campos', 'campos.idcampos  = pozos.campos_idcampos')
-	// 					 ->get("pozos")
-	// 					 ->result();
-	// 		$pozo[0]->campos_idcampos;
-
-	//   // $campo = $this->db->where();
-	//   $post_array['campo_id'] = $pozo[0]->campos_idcampos;
-	//   return $post_array;
-	// }   
 
 	public function estadisticas()
 	{
@@ -160,17 +136,11 @@ class Admin extends CI_Controller {
 		
 		$data["PLfTimeBarua"] = $this->db->where("campo_id",1)->select_avg("dias_instalacion")->where("fecha_instalacionf <=","LAST_DAY('".$this->input->post("anio")."-".$this->input->post("mes")."-01')",FALSE)->get("historial")->result();
 		$data["PLfTimeMot"] = $this->db->where("campo_id",2)->select_avg("dias_instalacion")->where("fecha_instalacionf <=","LAST_DAY('".$this->input->post("anio")."-".$this->input->post("mes")."-01')",FALSE)->get("historial")->result();
-		echo "<br><br><br><br>";
-		echo "<pre>";
-		// echo $this->db->last_query();
-		print_r($data["PLfTimeBarua"]);
-		echo "</pre>";
 		$data["PRunLifeBarua"] = $this->db->where("campo_id",1)->select_avg("dias_operacion")->where("fecha_arranque <=","LAST_DAY('".$this->input->post("anio")."-".$this->input->post("mes")."-01')",FALSE)->get("historial")->result();
 		$data["PRunLifeMot"] = $this->db->where("campo_id",2)->select_avg("dias_operacion")->where("fecha_arranque <=","LAST_DAY('".$this->input->post("anio")."-".$this->input->post("mes")."-01')",FALSE)->get("historial")->result();
 		
 		$data["MLfTimeBarua"] = $this->db->where("campo_id",1)->select("MAX(dias_instalacion) AS dias_instalacion")->where("fecha_falla","0000-00-00")->get("historial")->result();
 		$data["MLfTimeMot"] = $this->db->where("campo_id",2)->select("MAX(dias_instalacion) AS dias_instalacion")->where("fecha_falla","0000-00-00")->get("historial")->result();
-		
 		
 		$data["MRunLifeBarua"] = $this->db->where("campo_id",1)->select("MAX(dias_operacion) AS dias_operacion")->where("fecha_falla","0000-00-00")->get("historial")->result();
 		$data["MRunLifeMot"] = $this->db->where("campo_id",2)->select("MAX(dias_operacion) AS dias_operacion")->where("fecha_falla","0000-00-00")->get("historial")->result();
@@ -180,7 +150,6 @@ class Admin extends CI_Controller {
 		
 		$data["TPABarua"] = $this->db->where("campo_id",1)->where("fecha_falla","0000-00-00")->select("COUNT(fecha_falla) AS fecha_falla")->where("fecha_instalacionf <=","LAST_DAY('".$this->input->post("anio")."-".$this->input->post("mes")."-01')",FALSE)->get("historial")->result();
 		$data["TPAMot"] = $this->db->where("campo_id",2)->where("fecha_falla","0000-00-00")->select("COUNT(fecha_falla) AS fecha_falla")->where("fecha_instalacionf <=","LAST_DAY('".$this->input->post("anio")."-".$this->input->post("mes")."-01')",FALSE)->get("historial")->result();
-		
 		
 		$data["PLfTimePABarua"] = $this->db->where("campo_id",1)->where("fecha_falla","0000-00-00")->select_avg("dias_instalacion")->where("fecha_instalacionf <=","LAST_DAY('".$this->input->post("anio")."-".$this->input->post("mes")."-01')",FALSE)->get("historial")->result();
 		$data["PLfTimePAMot"] = $this->db->where("campo_id",2)->where("fecha_falla","0000-00-00")->select_avg("dias_instalacion")->where("fecha_instalacionf <=","LAST_DAY('".$this->input->post("anio")."-".$this->input->post("mes")."-01')",FALSE)->get("historial")->result();
@@ -208,32 +177,74 @@ class Admin extends CI_Controller {
 
 	public function GEstadisticas2()
 	{
+		$mes = array(1 => "Enero", 2 => "Febrero", 3 => "Marzo", 4 => "Abril", 5 => "Mayo", 6 => "Junio", 7 => "Julio", 8 => "Agosto", 9 => "Septiembre", 10 => "Octubre", 11 => "Noviembre", 12 => "Diciembre" );
+		$this->load->view('vista_header_gadmin');
+		$data['campo'] = $this->db->where("idcampos",$this->input->post("campo"))->get('campos')->result();
+		
 		for ($i=(int)$this->input->post("anioD"); $i <= (int)$this->input->post("anioH"); $i++) 
 		{
 			for ($j=1; $j <= 12; $j++)
 			{
-				echo "<br><br><br><br>";
-				echo "<pre>";
-				echo $i . " ". $j;
-				$data["PLfTimeBarua"] = $this->db->where("campo_id",1)->select_avg("dias_instalacion")->where("fecha_instalacionf <=","LAST_DAY('".$i."-".$j."-01')",FALSE)->get("historial")->result();
-				$data["PRunLifeBarua"] = $this->db->where("campo_id",1)->select_avg("dias_operacion")->where("fecha_arranque <=","LAST_DAY('".$i."-".$j."-01')",FALSE)->get("historial")->result();
-				$data["MMTBPBarua"] = $this->db->where("campo_id",1)->select("MAX(MTBP) AS MTBP")->where("fecha_pullingi <=","LAST_DAY('".$i."-".$j."-01')",FALSE)->get("historial")->result();
-				// $data["PLfTimeMot"] = $this->db->where("campo_id",2)->select_avg("dias_instalacion")->where("fecha_instalacionf <=","LAST_DAY('".$i."-".$j."-01')",FALSE)->get("historial")->result();
-				// $data["PRunLifeMot"] = $this->db->where("campo_id",2)->select_avg("dias_operacion")->where("fecha_arranque <=","LAST_DAY('".$i."-".$j."-01')",FALSE)->get("historial")->result();
-				// $data["MMTBPMot"] = $this->db->where("campo_id",2)->select("MAX(MTBP) AS MTBP")->where("fecha_pullingi <=","LAST_DAY('".$i."-".$j."-01')",FALSE)->get("historial")->result();
+				$data["PLfTimeBarua"][] = $this->db->where("campo_id",$this->input->post("campo"))->select_avg("dias_instalacion")->where("fecha_instalacionf <=","LAST_DAY('".$i."-".$j."-01')",FALSE)->get("historial")->result();
+				$data["PRunLifeBarua"][] = $this->db->where("campo_id",$this->input->post("campo"))->select_avg("dias_operacion")->where("fecha_arranque <=","LAST_DAY('".$i."-".$j."-01')",FALSE)->get("historial")->result();
+				$data["PMTBPBarua"][] = $this->db->where("campo_id",$this->input->post("campo"))->select_avg("MTBP")->where("fecha_arranque <=","LAST_DAY('".$i."-".$j."-01')",FALSE)->get("historial")->result();
 				
-				// echo $this->db->last_query();
-				print_r($data["PLfTimeBarua"]);
-				echo "</pre>";
+				$data["MRunTime"][] = $this->db->where("campo_id",$this->input->post("campo"))->where("fecha_falla >=","LAST_DAY('".$i."-".$j."-01')",FALSE)->select("DATEDIFF(LAST_DAY('".$i."-".$j."-01'), fecha_arranque )  AS dias_operacion, nombre_pozo, corrida")->join('pozos', 'pozos.idpozos  = historial.pozos_idpozos')->limit(1)->order_by("dias_operacion", "DESC")->get("historial")->result();
+
+
+				
+				$data['meses'][] = $mes[$j]."-".$i;
+				
 				if ($j == $this->input->post("mesH") && $i == $this->input->post("anioH")) {
 					break;
 				}
+			}
+		}
 				
+		$data['tabla'][] = $data["meses"];
+		$data['tabla'][] = $data["MRunTime"];
+		
+		$this->load->view('vista_estadisticas2', $data);
+		$this->load->view('vista_pie_gadmin2');
+	
+	}
+
+	public function HPA1()
+	{
+
+		$this->load->view('vista_header_admin');
+		$this->load->view('vista_buscar_HPA');
+		$this->load->view('vista_pie_admin');
+	
+	}
+
+	public function HPA2()
+	{
+		$mes = array(1 => "Enero", 2 => "Febrero", 3 => "Marzo", 4 => "Abril", 5 => "Mayo", 6 => "Junio", 7 => "Julio", 8 => "Agosto", 9 => "Septiembre", 10 => "Octubre", 11 => "Noviembre", 12 => "Diciembre" );
+		$this->load->view('vista_header_gadmin');
+		$data['campo'] = $this->db->where("idcampos",$this->input->post("campo"))->get('campos')->result();
+		for ($i=(int)$this->input->post("anioD"); $i <= (int)$this->input->post("anioH"); $i++) 
+		{
+			for ($j=1; $j <= 12; $j++)
+			{
+
+				$data["TPA"][] = $this->db->where("campo_id",$this->input->post("campo"))->where("fecha_falla","0000-00-00")->select("COUNT(fecha_falla) AS fecha_falla")->where("fecha_instalacionf <=","LAST_DAY('".$i."-".$j."-01')",FALSE)->get("historial")->result();
+				
+				// echo "<br><br><br><br>";
+				// echo "<pre>";
+				// echo $this->db->last_query();
+				// // print_r($data["NFallas"]);
+				// echo "</pre>";
+				$data["NFallas"][] = $this->db->where("campo_id",$this->input->post("campo"))->where("MONTH(fecha_falla)",$j)->where("YEAR(fecha_falla)",$i)->select("COUNT(fecha_falla) AS fecha_falla")->get("historial")->result();
+				$data['meses'][] = $mes[$j]."-".$i;
+				if ($j == $this->input->post("mesH") && $i == $this->input->post("anioH")) {
+					break;
+				}
 			}
 		}
 
-		$this->load->view('vista_estadisticas2', $data);
-		$this->load->view('vista_pie_gadmin');
+		$this->load->view('vista_HPA', $data);
+		$this->load->view('vista_pie_HPA');
 	
 	}
 
@@ -246,42 +257,86 @@ class Admin extends CI_Controller {
 	
 	}
 
-		/*
-	public function run()
+	public function usuarios()
 	{
-			A pozos_idpozos
 
-			B corrida
-			
-			C campos_idcampos
-			
-			A.D  AS fecha_instalacionf, A.E  AS fecha_arranque, A.F  AS fecha_falla, A.G  AS fecha_pullingi, A.H  AS dias_instalacion, A.I  AS dias_operacion, A.J AS profundidad_succion, A.K  AS cable_potencia, A.L  AS fabricante, A.M  AS nro_bombas, A.N AS series_bombas, A.O  AS nrostg_bombas, A.P  AS seriales_bombas, A.Q  AS modelo_bomba, A.R  AS series_MG, A.S  AS nrostg_MG, A.T  AS seriales_MG, A.U  AS modelo_MG, A.V  AS nro_SG, A.W  AS serie_SG, A.X  AS seriales_SG, A.Y  AS modelo_SG, A.Z  AS nrosellos_SS, A.AA AS  series_SS, A.AB AS  seriales_SS, A.AC AS  modelos_SS, A.AD AS  nro_MT, A.AE AS  series_MT, A.AF AS  seriales_MT, A.AG AS  modelo_MT, A.AH AS  HP_MT, A.AI AS  volt_MT, A.AJ AS  AMP_MT, A.AK AS  sn_S, A.AL AS  seriales_S, A.AM AS  modelo_S, A.AN AS  profundidad_S, A.AO AS  marca_Ytool, A.AP AS  odid_Ytool, A.AQ AS  sino_Ytool, A.AR AS  sino_camisav, A.AS AS  sino_camisa, A.AT AS  tipo_falla, A.AU AS  comentario_falla, A.AV AS  MTBP
+		$usuarios = new grocery_CRUD();
+		$usuarios->set_table('usuarios');
+		$usuarios->set_subject('Usuario');
 
-			fecha_instalacionf, fecha_arranque, fecha_falla, fecha_pullingi
+		$usuarios->display_as('nombre', 'Nombre');
+		$usuarios->display_as('login', 'Login');
+		$usuarios->display_as('clave', 'Clave');
+		$usuarios->display_as('confirmar', 'Confirmación de Clave');
+		$usuarios->display_as('tipo', 'Tipo de Usuario');
 
+		$usuarios->columns("nombre","login","tipo");
+		$usuarios->field_type('clave', 'password');
+		$usuarios->field_type('confirmar', 'password');
 
+		$usuarios->set_rules('nombre', 'Nombre del Usuario',"required|alpha_space|max_length[45]|min_length[2]");
+		$usuarios->set_rules('login', 'Login',"required|alpha|max_length[20]|min_length[4]");
+		$usuarios->set_rules('clave', 'Clave',"max_length[20]|min_length[3]|matches[confirmar]");
+		$usuarios->set_rules('confirmar', 'Confirmación de Clave',"max_length[20]|min_length[3]|matches[clave]");
+		$usuarios->set_rules('tipo', 'Tipo de Usuario',"required");
 
-		$bdd = 	$this
-				->db
-				->select("B.idpozos AS pozos_idpozos, A.B as corrida, C.idcampos AS campos_idcampos, A.D AS fecha_instalacionf, A.E  AS fecha_arranque, A.F  AS fecha_falla, A.G  AS fecha_pullingi, A.H  AS dias_instalacion, A.I  AS dias_operacion, A.J  AS profundidad_succion, A.K  AS cable_potencia, A.L  AS fabricante, A.M  AS nro_bombas, A.N  AS series_bombas, A.O  AS nrostg_bombas, A.P  AS seriales_bombas, A.Q  AS modelo_bombas, A.R  AS series_MG, A.S  AS nrostg_MG, A.T  AS seriales_MG, A.U  AS modelo_MG, A.V  AS nro_SG, A.W  AS serie_SG, A.X  AS seriales_SG, A.Y  AS modelo_SG, A.Z  AS nrosellos_SS, A.AA AS  series_SS, A.AB AS  seriales_SS, A.AC AS  modelos_SS, A.AD AS  nro_MT, A.AE AS  series_MT, A.AF AS  seriales_MT, A.AG AS  modelo_MT, A.AH AS  HP_MT, A.AI AS  volt_MT, A.AJ AS  AMP_MT, A.AK AS  sn_S, A.AL AS  seriales_S, A.AM AS  modelo_S, A.AN AS  profundidad_S, A.AO AS  marca_Ytool, A.AP AS  odid_Ytool, A.AQ AS  sino_Ytool, A.AR AS  sino_camisav, A.AS AS  sino_camisa, A.AT AS  tipo_falla, A.AU AS  comentario_falla, A.AV AS  MTBP")
-				->join('pozos as B', 'B.nombre = A.A')
-				->join('campos as C', 'C.nombre = A.C')
-				->get("Hoja1 as A")
-				->result();
-		
-		echo "<pre>";
-		foreach ($bdd as $value) {
-			$value->fecha_instalacionf = $this->datemanager->strdate2mySQL($value->fecha_instalacionf);
-			$value->fecha_arranque = $this->datemanager->strdate2mySQL($value->fecha_arranque);
-			$value->fecha_falla = $this->datemanager->strdate2mySQL($value->fecha_falla);
-			$value->fecha_pullingi = $this->datemanager->strdate2mySQL($value->fecha_pullingi);
-			print_r($value);
-			$this->db->insert("historial",$value);
-		}
-		echo "</pre>";
-		// echo $this->datemanager->strdate2mySQL("12-ene-2010");
+		$usuarios->callback_before_insert(array($this,'encrypt_clave_callback'));
+		$usuarios->callback_before_update(array($this,'encrypt_confirmar_callback'));
+
+		$usuarios->callback_edit_field('clave',array($this,'vaciar_campo_clave'));
+		$usuarios->callback_edit_field('confirmar',array($this,'vaciar_campo_confirmar'));
+
+		$output = $usuarios->render();
+
+		$this->load->view('vista_header_admin', $output);
+		$this->load->view('vista_contenido_usuarios');
+		$this->load->view('vista_pie_admin');
 
 	}
-		*/
+
+	function encrypt_clave_callback($post_array, $primary_key = null)
+	{
+	    
+	    $post_array['clave'] = sha1($post_array['clave']);
+	    $post_array['confirmar'] = sha1($post_array['confirmar']);
+
+	    return $post_array;
+	}
+
+	function encrypt_confirmar_callback($post_array, $primary_key = null)
+	{
+	    
+	    if (!empty($post_array['clave']))
+	    {
+	        
+	        $post_array['clave'] = sha1($post_array['clave']);
+	        $post_array['confirmar'] = sha1($post_array['confirmar']);
+	    
+	    }
+	    else
+	    {
+	    
+	        unset($post_array['clave']);
+	        unset($post_array['confirmar']);
+	    
+	    }
+	    
+	    return $post_array;
+	
+	}
+
+	function vaciar_campo_clave($post_array, $primary_key = null)
+	{
+	    
+	    return '<input type="password" maxlength="50" name="clave" id="field-clave">';
+	
+	}
+
+	function vaciar_campo_confirmar($post_array, $primary_key = null)
+	{
+	    
+	    return '<input type="password" maxlength="50" name="confirmar" id="field-confirmar">';
+	
+	}
 
 }

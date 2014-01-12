@@ -1,7 +1,7 @@
    <div class="page-header">
-     <h1>Seleccionar Estadísticas por Rango</h1>
+     <h1>Seleccionar Historial de Pozos Activos por Rango</h1>
    </div>
-   <form class="form-horizontal" method="post" action="<?=base_url()?>admin/GEstadisticas2">
+   <form class="form-horizontal" method="post" action="<?=base_url()?>admin/HPA2">
 	   	<!-- <div class="row">
 	   		<label class="col-sm-2 control-label" for="desde">Desde</label>
 			<div class="col-xs-3">

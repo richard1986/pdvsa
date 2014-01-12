@@ -34,49 +34,28 @@
     </script>
 
      <script class="code" type="text/javascript">
-
       
         $(document).ready(function () {
             
-            
-            // Datos para el gráfico 2
-            //Prom dias instalacion
-            var s11 = [<?php foreach ($PLfTimeBarua as $valor) {
-              echo round($valor[0]->dias_instalacion);
-              if (end($PLfTimeBarua)!==$valor) {
+            //Total de Pozos Activos
+            var s11 = [<?php foreach ($TPA as $valor) {
+              echo round($valor[0]->fecha_falla);
+              if (end($TPA)!==$valor) {
                 echo ",";
               }
             } ?>];
             
-            //Prom dias operacion
-            var s22 = [<?php foreach ($PRunLifeBarua as $valor) {
-              echo round($valor[0]->dias_operacion);
-              if (end($PRunLifeBarua)!==$valor) {
+            //Número de Fallas
+            var s22 = [<?php foreach ($NFallas as $valor) {
+              echo round($valor[0]->fecha_falla);
+              if (end($NFallas)!==$valor) {
                 echo ",";
               }
             } ?>];
             
             //max dias operacion pozo activo
-
             // var s33 = [234,324,324,324,234,234,324,234,324,234,234,343];
-            var s33 = [<?php foreach ($MRunTime as $valor) {
-              // echo "[".round($valor[0]->dias_operacion).",'";
-              echo round($valor[0]->dias_operacion);
-              // echo "']";
-              if (end($MRunTime)!==$valor) {
-                echo ",";
-              }
-            } ?>];
             
-
-            // mtbp
-            var s44 = [<?php foreach ($PMTBPBarua as $valor) {
-              echo round($valor[0]->MTBP);
-              if (end($PMTBPBarua)!==$valor) {
-                echo ",";
-              }
-            } ?>];
-
             //meses
             var ticks2 = [<?php 
               foreach ($meses as $valor) {
@@ -89,7 +68,7 @@
             
             // -----------------------------------
 
-            plot1 = $.jqplot("chart1", [s11, s22, s33, s44], {
+            plot1 = $.jqplot("chart1", [s22,s11/*, s33, s44*/], {
                 animate: true,
                 animateReplot: true,
                 legend: {
@@ -105,7 +84,8 @@
                 series:[
                 {
 
-                  label:'Promedio Días Instalación',
+                  label:'N° de Fallas',
+                  color: 'red',
                   pointLabels: {
                       show: false
                   },
@@ -122,8 +102,10 @@
                       highlightMouseOver: true
                   },
                 },
+                
                 {
-                  label:'Prom. Días Operación',
+                  label:'Pozos Activos',
+                  color: 'green',
                   pointLabels: {
                       show: false
                   },
@@ -140,12 +122,12 @@
                       highlightMouseOver: true
                   },
                 },
-                {
+                /*{
                   label:'Máx Días Operación Pozo Activo',
                   pointLabels: {
-                      show: false
+                      show: true
                   },
-                  yaxis: 'y2axis',
+                  yaxis: 'yaxis',
                   dragable: {
                       color: '#ff3366',
                       constrainTo: 'x'
@@ -168,6 +150,7 @@
                       color: '#cccccc'
                   }
                 }
+                */
                 ],
                 axesDefaults: {
                     labelRenderer: $.jqplot.CanvasAxisLabelRenderer,
@@ -186,10 +169,10 @@
                     },
                     yaxis: {
                       autoscale:false,
-                      label:'Promedio Días',
+                      label:'Pozos Activos',
                       labelRenderer: $.jqplot.CanvasAxisLabelRenderer,
-                      min: 0,
-                      max: 1500,
+                      min: null,
+                      max: null,
                       rendererOptions: {
                           alignTicks: true,
                           forceTickAt0: true
@@ -199,8 +182,8 @@
                       autoscale:true,
                       label:'Max. Días Operación',
                       labelRenderer: $.jqplot.CanvasAxisLabelRenderer,
-                      min: 0,
-                      max: null,
+                      min: null,
+                      // max: 5000,
                       rendererOptions: {
                           alignTicks: true,
                           forceTickAt0: true
@@ -211,12 +194,12 @@
                     show: true, 
                     showLabel: true, 
                     tooltipAxes: 'y',
-                    sizeAdjust: 0 , tooltipLocation : 'nw'
+                    sizeAdjust: 0,
+                    tooltipLocation : 'ne'
                 }
             });
           
         });
-
 
     </script>
     <!-- End example scripts -->
@@ -239,7 +222,6 @@
     <script type="text/javascript" src="<?=ASSETS_DIR?>plugins/jqplot.canvasTextRenderer.min.js"></script>
     <script type="text/javascript" src="<?=ASSETS_DIR?>plugins/jqplot.canvasAxisTickRenderer.min.js"></script>
     <script type="text/javascript" src="<?=ASSETS_DIR?>plugins/jqplot.canvasAxisLabelRenderer.min.js"></script>
-    <script type="text/javascript" src="<?=ASSETS_DIR?>plugins/jqplot.dateAxisRenderer.min.js"></script>
 
     <!-- End additional plugins -->
 

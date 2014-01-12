@@ -4,6 +4,38 @@
 		"selected_items":
 		[
 			[
+				"dias",
+				"dias_operacion"
+			],
+			[
+				"nombre",
+				"nombre_pozo"
+			],
+			[
+				"FECHA",
+				"fecha_arranque"
+			],
+			[
+				"id",
+				"idpozos"
+			],
+			[
+				"for",
+				"for	for …"
+			],
+			[
+				"pozo",
+				"pozos_idpozos"
+			],
+			[
+				"TP",
+				"TPABarua"
+			],
+			[
+				"fecha_",
+				"fecha_instalacionf"
+			],
+			[
 				"campo",
 				"campos_idcampos"
 			],
@@ -18,10 +50,6 @@
 			[
 				"NOMBRE",
 				"nombre"
-			],
-			[
-				"for",
-				"foreach	foreach …"
 			],
 			[
 				"arra",
@@ -42,10 +70,6 @@
 			[
 				"Da",
 				"DateDiff"
-			],
-			[
-				"dias",
-				"dias_instalacion"
 			],
 			[
 				"http",
@@ -119,47 +143,23 @@
 			"file": "application/controllers/admin.php",
 			"settings":
 			{
-				"buffer_size": 18072,
+				"buffer_size": 16427,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "application/views/vista_header_gadmin.php",
+			"file": "application/views/vista_pie_gadmin2.php",
 			"settings":
 			{
-				"buffer_size": 3885,
+				"buffer_size": 8621,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "application/views/vista_estadisticas.php",
+			"file": "application/views/vista_estadisticas2.php",
 			"settings":
 			{
-				"buffer_size": 3536,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "application/views/vista_contenido_historial.php",
-			"settings":
-			{
-				"buffer_size": 779,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "application/views/vista_pie_admin.php",
-			"settings":
-			{
-				"buffer_size": 1952,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "logs/error.log",
-			"settings":
-			{
-				"buffer_size": 7496,
+				"buffer_size": 4196,
 				"line_ending": "Unix"
 			}
 		}
@@ -200,25 +200,42 @@
 	},
 	"file_history":
 	[
-		"/home/bj/www/pdvsa/logs/error.log",
 		"/home/bj/www/pdvsa/application/views/vista_header_admin.php",
+		"/home/bj/www/pdvsa/logs/error.log",
+		"/home/bj/www/pdvsa/application/views/vista_header_gadmin.php",
+		"/home/bj/www/pdvsa/application/views/vista_pie_HPA.php",
+		"/home/bj/www/pdvsa/application/controllers/welcome.php",
+		"/home/bj/www/pdvsa/application/views/vista_contenido_usuarios.php",
+		"/home/bj/www/pdvsa/application/views/vista_HPA.php",
+		"/home/bj/www/pdvsa/application/views/vista_buscar_HPA.php",
+		"/home/bj/www/pdvsa/application/views/vista_pie_gadmin.php",
+		"/home/bj/www/pdvsa/application/views/vista_pie_gadmin2.php",
+		"/home/bj/www/pdvsa/application/views/vista_estadisticas2.php",
+		"/home/bj/www/pdvsa/application/views/vista_buscar_estadisticas2.php",
+		"/home/bj/www/sibe/application/controllers/noticias.php",
+		"/home/bj/www/sibe/application/views/menu_view.php",
+		"/home/bj/www/sibe/application/controllers/carreras.php",
+		"/home/bj/www/pdvsa/application/controllers/admin.php",
+		"/home/bj/www/sibe/application/views/footer_view.php",
+		"/home/bj/www/sibe/application/views/appScriptCenso_view.php",
+		"/home/bj/www/sibe/jquery/app.js",
+		"/home/bj/www/sibe/application/views/censo_view.php",
+		"/home/bj/www/pdvsa/application/views/vista_pie_admin.php",
+		"/home/bj/www/pdvsa/application/views/script_h.php",
+		"/home/bj/www/pdvsa/system/libraries/Form_validation.php",
+		"/home/bj/www/pdvsa/application/libraries/MY_Form_validation.php",
+		"/home/bj/www/pdvsa/application/views/vista_estadisticas.php",
+		"/home/bj/www/pdvsa/application/views/vista_buscar_estadisticas.php",
+		"/home/bj/www/pdvsa/application/views/vista_contenido_historial.php",
+		"/home/bj/www/pdvsa/application/views/vista_contenido_admin.php",
+		"/home/bj/www/pdvsa/application/views/vista_contenido_campos.php",
+		"/home/bj/www/pdvsa/application/views/vista_contenido_pozos.php",
 		"/media/bj/Johnmer/pozos_pdvsa(3).sql",
 		"/home/bj/www/pdvsa/application/libraries/datemanager.php",
-		"/home/bj/www/pdvsa/application/views/vista_buscar_estadisticas.php",
-		"/home/bj/www/pdvsa/application/views/vista_header_gadmin.php",
-		"/home/bj/www/pdvsa/application/views/vista_estadisticas.php",
-		"/home/bj/www/pdvsa/application/views/vista_pie_gadmin.php",
 		"/home/bj/www/pdvsa/application/config/autoload.php",
-		"/home/bj/www/pdvsa/application/views/vista_pie_admin.php",
-		"/home/bj/www/pdvsa/application/views/vista_contenido_campos.php",
-		"/home/bj/www/pdvsa/application/views/vista_contenido_historial.php",
-		"/home/bj/www/pdvsa/application/views/vista_contenido_pozos.php",
-		"/home/bj/www/pdvsa/application/views/vista_contenido_admin.php",
 		"/home/bj/www/odontologia/.htaccess",
-		"/home/bj/www/pdvsa/application/controllers/admin.php",
 		"/home/bj/Downloads/jqplot/examples/barLineAnimated.html",
 		"/home/bj/www/pdvsa/assets/css/bootstrap.css",
-		"/home/bj/www/pdvsa/application/views/script_h.php",
 		"/home/bj/www/pdvsa/assets/css/default.css",
 		"/home/bj/Downloads/jqplot/examples/ages.json",
 		"/home/bj/Downloads/jqplot/examples/ajax-loader.gif",
@@ -279,7 +296,6 @@
 		"/home/bj/Downloads/jqplot/examples/zoomProxy.html",
 		"/home/bj/Downloads/jqplot/examples/zooming.html",
 		"/home/bj/www/pdvsa/application/views/script_h",
-		"/home/bj/www/pdvsa/application/controllers/welcome.php",
 		"/home/bjohnmer/www/pdvsa/application/views/vista_header_admin.php",
 		"/home/bjohnmer/www/pdvsa/application/views/vista_contenido_historial.php",
 		"/home/bjohnmer/www/pdvsa/application/views/vista_contenido_pozos.php",
@@ -311,23 +327,7 @@
 		"/home/bjohnmer/www/usm/application/controllers/medicos.php",
 		"/home/bjohnmer/www/usm/application/views/lespecialidades.html",
 		"/home/bjohnmer/www/usm/application/views/lpacientes.html",
-		"/home/bjohnmer/www/usm/application/views/lpacientes_vista.php",
-		"/home/bjohnmer/www/usm/application/views/lusuarios_vista.php",
-		"/home/bjohnmer/www/usm/application/config/config.php",
-		"/home/bjohnmer/www/usm/application/views/reposos.html",
-		"/home/bjohnmer/www/usm/application/controllers/admin.php",
-		"/home/bjohnmer/www/usm/application/views/pacientes_vista.php",
-		"/home/bjohnmer/www/usm/application/views/espera1_vista.php",
-		"/home/bjohnmer/www/usm/application/views/espera2_vista.php",
-		"/home/bjohnmer/www/usm/application/views/medicos_vista.php",
-		"/home/bjohnmer/www/usm/application/views/usuarios_vista.php",
-		"/home/bjohnmer/www/usm/application/views/pieadmin_vista.php",
-		"/home/bjohnmer/www/usm/assets/grocery_crud/js/jquery_plugins/config/jquery.datepicker.config.js",
-		"/home/bjohnmer/www/usm/application/views/piefront.php",
-		"/home/bjohnmer/www/usm/application/views/piefront_vista.php",
-		"/home/bjohnmer/www/usm/application/libraries/MY_Form_validation.php",
-		"/home/bjohnmer/www/usm/application/libraries/Grocery_CRUD.php",
-		"/home/bjohnmer/www/usm/application/language/spanish/form_validation_lang.php"
+		"/home/bjohnmer/www/usm/application/views/lpacientes_vista.php"
 	],
 	"find":
 	{
@@ -338,6 +338,9 @@
 		"height": 0.0,
 		"where_history":
 		[
+			"/home/bj/www/sibe",
+			"/home/bj/www/sibe/application/views",
+			"/home/bj/www/pdvsa/application/views",
 			"/home/bj/Downloads/jqplot/examples",
 			"/home/bj/Downloads/jqplot/examples/area.html",
 			"/home/bjohnmer/www/usm/application/views",
@@ -349,6 +352,63 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"set_rules",
+			"0",
+			"tabla",
+			"meses",
+			"MRunTime",
+			"meses",
+			"MRunTime",
+			"dias_operacion",
+			"canvasAxisLabelRenderer",
+			"PMTBPBarua",
+			"PLfTimeBarua",
+			"MRunTime",
+			"PLfTimeBarua",
+			"NFallas",
+			"PLfTimeBarua",
+			"NFallas",
+			"PRunLifeBarua",
+			"PLfTimeBarua",
+			"mesD",
+			"Carreras",
+			"descrip_carrera",
+			"descripcion_noticia",
+			"MMTBPBarua",
+			"PMTBPBarua",
+			"PLfTimeBarua",
+			"PRunLifeBarua",
+			"#fech_ingreso",
+			".hasDatepicker",
+			"fech_ingreso",
+			"#fech_ingreso",
+			"MMTBPBarua",
+			"PLfTimeBarua",
+			"MMTBPBarua",
+			"PLfTimeBarua",
+			"MLfTimeBarua",
+			"MMTBPBarua",
+			"PLfTimeBarua",
+			"MLfTimeBarua",
+			"TPABarua",
+			"PLfTimeBarua",
+			"corrida",
+			"PLfTimePAMot",
+			"PRLPAMot",
+			"PLfTimePABarua",
+			"PRLPABarua",
+			"NFallasBarua",
+			"NFallasMot",
+			"MRunLifeBarua",
+			"MRunLifeMot",
+			"arranque",
+			"\n		",
+			"PLfTimeBarua",
+			"PLfTimeMot",
+			"evBarua",
+			"evMot",
+			"campos_idcampos",
+			"#field-fecha_falla",
 			"crud",
 			"historial",
 			"sources",
@@ -419,23 +479,7 @@
 			"activo",
 			"espera",
 			"crud",
-			"col-lg-4 col-offset-4",
-			"medicos",
-			"cnf_usuario",
-			"pwd_usuario",
-			"cnf_usuario",
-			"pwd_usuario",
-			"cnf_usuario",
-			"pwd_usuario",
-			"crud",
-			"pacientes",
-			"datepicker",
-			"medicos",
-			"valid",
-			"medicos",
-			"strong",
-			"model",
-			"theme"
+			"col-lg-4 col-offset-4"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -464,15 +508,15 @@
 					"file": "application/controllers/admin.php",
 					"settings":
 					{
-						"buffer_size": 18072,
+						"buffer_size": 16427,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3826,
-								3826
+								11790,
+								11790
 							]
 						],
 						"settings":
@@ -524,26 +568,26 @@
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 2387.0,
+						"translation.x": 2731.0,
+						"translation.y": 4643.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "application/views/vista_header_gadmin.php",
+					"file": "application/views/vista_pie_gadmin2.php",
 					"settings":
 					{
-						"buffer_size": 3885,
+						"buffer_size": 8621,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								234,
+								234
 							]
 						],
 						"settings":
@@ -597,25 +641,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1725.0,
+						"translation.y": 1716.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "application/views/vista_estadisticas.php",
+					"file": "application/views/vista_estadisticas2.php",
 					"settings":
 					{
-						"buffer_size": 3536,
+						"buffer_size": 4196,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3181,
-								3181
+								732,
+								732
 							]
 						],
 						"settings":
@@ -668,221 +712,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1674.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "application/views/vista_contenido_historial.php",
-					"settings":
-					{
-						"buffer_size": 779,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								687,
-								687
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close"
-							],
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "application/views/vista_pie_admin.php",
-					"settings":
-					{
-						"buffer_size": 1952,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1262,
-								1262
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close"
-							],
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 846.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "logs/error.log",
-					"settings":
-					{
-						"buffer_size": 7496,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close"
-							],
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 2174.0,
+						"translation.y": 82.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -950,6 +780,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 362.0,
+	"side_bar_width": 313.0,
 	"status_bar_visible": true
 }
